@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head'); %>
+		<style>
+			.logo img {
+				width: 400px;
+				height: auto;
+			}
+
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-items: center;
+				align-items: center;
+				gap: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<main class="container">
+			<div class="logo">
+				<img
+					src="data:image/png;base64,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"
+					alt="Logo"
+					height="200"
+					width="300" />
+			</div>
+			<div class="text-center">
+				<ul class="d-flex c-nav">
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="http://localhost:3001/"
+							target="_blank"
+							>Home</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/docs/#/"
+							>API Documentation</a
+						>
+					</li>
+				</ul>
+			</div>
+		</main>
+
+		<footer><%- include('./partials/footer'); %></footer>
+	</body>
+</html>
